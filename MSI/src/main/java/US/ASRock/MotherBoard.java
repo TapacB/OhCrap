@@ -21,6 +21,8 @@ public class MotherBoard extends JFrame {
 
 
 
+
+
     public ArrayList<String> getTextFromFile(){
         InputStream in = getClass().getResourceAsStream("/mb.txt");
         BufferedReader reader = new BufferedReader(new InputStreamReader(in));
@@ -33,7 +35,7 @@ public class MotherBoard extends JFrame {
         }
         catch (Exception e) {
             e.printStackTrace();
-        }
+        }System.out.println(bd.mySQL("select * from heroes"));
         return list;
     }
 
@@ -53,18 +55,20 @@ public class MotherBoard extends JFrame {
         setContentPane(jPanel);
         pack();
         setVisible(true);
+
     }
 
 
 
     public static void main(String[] args){
-        try{
-        getConfig();}
-        catch (Exception e){
-            e.printStackTrace();
-        }
+//        try{
+//        getConfig();}
+//        catch (Exception e){
+//            e.printStackTrace();
+//        }
         MotherBoard mb=new MotherBoard();
         mb.setVisible(true);
+
     }
 
 
